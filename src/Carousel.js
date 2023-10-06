@@ -22,15 +22,16 @@ function Carousel({ photos, title }) {
 
   //Increments currCardIdx state by 1
   function goForward() {
-    // if (currCard <= total - 1)//fixed the foawrd functions
-    setCurrCardIdx(currCardIdx + 1);
+    if (currCardIdx < total - 1) {//fixed the foawrd functions
+      setCurrCardIdx(currCardIdx + 1);
+    }
   };
 
   // added logic to go backwards
   function goBackward() {
-
-    setCurrCardIdx(currCardIdx - 1)
-
+    if (currCardIdx > 0) {
+      setCurrCardIdx(currCardIdx - 1)
+    }
   }
 
   return (
